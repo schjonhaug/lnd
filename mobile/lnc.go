@@ -19,7 +19,6 @@ import (
 	"github.com/lightningnetwork/lnd/build"
 	"github.com/lightningnetwork/lnd/keychain"
 	"github.com/lightningnetwork/lnd/lnrpc"
-	"github.com/lightningnetwork/lnd/signal"
 	"google.golang.org/grpc"
 	"gopkg.in/macaroon-bakery.v2/bakery"
 	"gopkg.in/macaroon-bakery.v2/bakery/checkers"
@@ -44,6 +43,8 @@ var (
 		*grpc.ClientConn, string, func(string, error)))
 
 	interceptorLogsInitialize = false
+
+	shutdownInterceptor Interceptor
 )
 
 type mobileClient struct {
@@ -128,7 +129,7 @@ func InitLNC(nameSpace, debugLevel string) error {
 		}
 
 		// Hook interceptor for os signals.
-		shutdownInterceptor, err := signal.Intercept()
+		shutdownInterceptor, err := Intercept()
 		if err != nil {
 			return err
 		}
