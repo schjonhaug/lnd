@@ -294,7 +294,7 @@ apple: mobile-rpc
 ios: mobile-rpc
 	@$(call print, "Building iOS cxframework ($(IOS_BUILD)).")
 	mkdir -p $(IOS_BUILD_DIR)
-	$(GOMOBILE_BIN) bind -target=ios,iossimulator -tags="mobile $(DEV_TAGS) $(RPC_TAGS)" -ldflags "$(RELEASE_LDFLAGS)" -v -o $(IOS_BUILD) $(MOBILE_PKG)
+	$(GOMOBILE_BIN) bind -target=ios,iossimulator -tags="mobile appengine autopilotrpc chainrpc invoicesrpc neutrinorpc peersrpc signrpc wtclientrpc watchtowerrpc routerrpc walletrpc verrpc" -ldflags "$(RELEASE_LDFLAGS)" -v -o $(IOS_BUILD) $(MOBILE_PKG)
 
 macos: mobile-rpc
 	@$(call print, "Building macOS cxframework ($(IOS_BUILD)).")
@@ -304,7 +304,7 @@ macos: mobile-rpc
 android: mobile-rpc
 	@$(call print, "Building Android library ($(ANDROID_BUILD)).")
 	mkdir -p $(ANDROID_BUILD_DIR)
-	$(GOMOBILE_BIN) bind -target=android -androidapi 21 -tags="mobile $(DEV_TAGS) $(RPC_TAGS)" -ldflags "$(RELEASE_LDFLAGS)" -v -o $(ANDROID_BUILD) $(MOBILE_PKG)
+	$(GOMOBILE_BIN) bind -target=android -androidapi 21 -tags="mobile appengine autopilotrpc chainrpc invoicesrpc neutrinorpc peersrpc signrpc wtclientrpc watchtowerrpc routerrpc walletrpc verrpc" -ldflags "$(RELEASE_LDFLAGS)" -v -o $(ANDROID_BUILD) $(MOBILE_PKG)
 
 mobile: ios android
 
