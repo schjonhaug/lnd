@@ -18,7 +18,7 @@ require (
 	github.com/btcsuite/btcwallet/wtxmgr v1.5.0
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
 	github.com/davecgh/go-spew v1.1.1
-	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
+	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.2.0
 	github.com/gabstv/go-bsdiff v1.0.5
 	github.com/go-errors/errors v1.0.1
 	github.com/golang-migrate/migrate/v4 v4.16.1
@@ -60,12 +60,12 @@ require (
 	go.etcd.io/bbolt v1.3.7
 	go.etcd.io/etcd/client/pkg/v3 v3.5.7
 	go.etcd.io/etcd/client/v3 v3.5.7
-	golang.org/x/crypto v0.7.0
+	golang.org/x/crypto v0.14.0
 	golang.org/x/exp v0.0.0-20230315142452-642cacee5cc0
 	golang.org/x/mobile v0.0.0-20190719004257-d2bd2a29d028
 	golang.org/x/net v0.10.0
 	golang.org/x/sync v0.2.0
-	golang.org/x/term v0.8.0
+	golang.org/x/term v0.13.0
 	golang.org/x/time v0.1.0
 	google.golang.org/grpc v1.56.3
 	google.golang.org/protobuf v1.30.0
@@ -92,7 +92,7 @@ require (
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd/v22 v22.3.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
-	github.com/decred/dcrd/crypto/blake256 v1.0.0 // indirect
+	github.com/decred/dcrd/crypto/blake256 v1.0.1 // indirect
 	github.com/decred/dcrd/lru v1.1.0 // indirect
 	github.com/docker/cli v20.10.17+incompatible // indirect
 	github.com/docker/docker v20.10.24+incompatible // indirect
@@ -102,6 +102,7 @@ require (
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/fergusstrange/embedded-postgres v1.10.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
+	github.com/fxamacker/cbor/v2 v2.4.0 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/gofrs/uuid v4.2.0+incompatible // indirect
@@ -168,14 +169,17 @@ require (
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rogpeppe/fastuuid v1.2.0 // indirect
 	github.com/russross/blackfriday/v2 v2.0.1 // indirect
+	github.com/schjonhaug/tapcards v0.1.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.9.2 // indirect
+	github.com/skythen/apdu v0.2.0 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stretchr/objx v0.5.0 // indirect
 	github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20201229170055-e5319fda7802 // indirect
 	github.com/ulikunitz/xz v0.5.11 // indirect
+	github.com/x448/float16 v0.8.4 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect
 	github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f // indirect
 	github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415 // indirect
@@ -200,8 +204,8 @@ require (
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.23.0 // indirect
 	golang.org/x/mod v0.10.0 // indirect
-	golang.org/x/sys v0.8.0 // indirect
-	golang.org/x/text v0.9.0 // indirect
+	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/text v0.13.0 // indirect
 	golang.org/x/tools v0.9.1 // indirect
 	google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1 // indirect
 	gopkg.in/errgo.v1 v1.0.1 // indirect
@@ -241,6 +245,8 @@ replace github.com/btcsuite/btcwallet/walletdb => github.com/djkazic/btcwallet/w
 
 // If you change this please also update .github/pull_request_template.md and
 // docs/INSTALL.md.
-go 1.19
+go 1.21
+
+toolchain go1.22.1
 
 retract v0.0.2
