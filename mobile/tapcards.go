@@ -6,6 +6,10 @@ import (
 
 var satscard tapcards.Satscard
 
-func SatscardStatus() ([]byte, error) {
+func TapcardsISOAppletSelectRequest() ([]byte, error) {
+	return satscard.ISOAppletSelectRequest()
+}
+
+func TapcardsStatus() ([]byte, error) {
 	return satscard.StatusRequest()
 }
