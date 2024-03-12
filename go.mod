@@ -54,6 +54,7 @@ require (
 	github.com/miekg/dns v1.1.50
 	github.com/ory/dockertest/v3 v3.10.0
 	github.com/prometheus/client_golang v1.11.1
+	github.com/schjonhaug/tapcards v0.2.0
 	github.com/stretchr/testify v1.8.4
 	github.com/tv42/zbase32 v0.0.0-20160707012821-501572607d02
 	github.com/urfave/cli v1.22.9
@@ -169,7 +170,6 @@ require (
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rogpeppe/fastuuid v1.2.0 // indirect
 	github.com/russross/blackfriday/v2 v2.0.1 // indirect
-	github.com/schjonhaug/tapcards v0.1.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.9.2 // indirect
 	github.com/skythen/apdu v0.2.0 // indirect
