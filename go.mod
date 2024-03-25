@@ -245,8 +245,6 @@ replace github.com/btcsuite/btcwallet/walletdb => github.com/djkazic/btcwallet/w
 
 // If you change this please also update .github/pull_request_template.md and
 // docs/INSTALL.md.
-go 1.21
-
-toolchain go1.22.1
+go 1.19
 
 retract v0.0.2
